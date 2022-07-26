@@ -13,11 +13,20 @@ function makeUpper(e){
     }
 
 document.getElementById('sarc-Btn').addEventListener('click', makeSarc)
-function makeSarc(e){
+function makeSarc (e) {
+    console.log(e)
     const z = document.getElementById('patrick')
-        let txt = z.innerText.split("")
-        for (i=0; i<txt.length; i+2){
-            txt[i] = txt.toUpperCase()
+    const text = z.innerText
+    let result = '';
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let i = 0
+    for (let char of text) {
+        if (alphabet.includes(char)) {
+            if (i % 2 === 0) char = char.toLowerCase()
+            if (i % 2 === 1) char = char.toUpperCase()
+            i++
         }
-        txt.join("")
+        result += char
+        z.innerText = result
     }
+}
