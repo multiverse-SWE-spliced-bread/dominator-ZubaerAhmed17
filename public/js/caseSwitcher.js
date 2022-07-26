@@ -1,5 +1,5 @@
 console.log("Hello")
-document.getElementById('quiet-Btn').addEventListener('click', makeLower)
+document.getElementById('quiet-btn').addEventListener('click', makeLower)
 function makeLower(e){
     console.log(e)
     const p = document.getElementById('patrick')
@@ -7,14 +7,14 @@ function makeLower(e){
         p.innerText = txt.toLowerCase()
 }
 
-document.getElementById('loud-Btn').addEventListener('click', makeUpper)
+document.getElementById('loud-btn').addEventListener('click', makeUpper)
 function makeUpper(e){
     const y = document.getElementById('patrick')
         let txt = y.innerText
         y.innerText = txt.toUpperCase()
 }
 
-document.getElementById('sarc-Btn').addEventListener('click', makeSarc)
+document.getElementById('sarc-btn').addEventListener('click', makeSarc)
 function makeSarc (e) {
     console.log(e)
     const z = document.getElementById('patrick')
